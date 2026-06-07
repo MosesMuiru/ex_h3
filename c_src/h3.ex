@@ -6,4 +6,6 @@ defmodule H3 do
   end
 
   def lat_lng_to_cell({_lat, _lng}, _res), do: :erlang.nif_error(:nif_not_loaded)
+
+  def cell_to_lat_lng(_index), do: :erlang.nif_error(:nif_not_loaded)
 end
