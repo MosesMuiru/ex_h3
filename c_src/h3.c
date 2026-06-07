@@ -64,4 +64,4 @@ static ErlNifFunc nif_funcs[] = {
     {"cell_to_lat_lng", 1, cell_to_lat_lng}
 };
 
-ERL_NIF_INIT(Elixir.H3, nif_funcs, NULL, NULL, NULL, NULL);
+ERL_NIF_INIT(Elixir.ExH3, nif_funcs, NULL, NULL, NULL, NULL);
