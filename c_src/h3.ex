@@ -20,4 +20,21 @@ defmodule H3 do
   @spec cell_to_boundary(h3_index()) :: boundary_t()
   def cell_to_boundary(_index), do: :erlang.nif_error(:nif_not_loaded)
 
+  @spec max_grid_disk_size(non_neg_integer()) :: non_neg_integer()
+  def max_grid_disk_size(_k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec grid_disk_unsafe(h3_index(), non_neg_integer()) :: h3_index()
+  def grid_disk_unsafe(_origin, _k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec grid_disk(h3_index(), non_neg_integer()) :: list(h3_index())
+  def grid_disk(_origin, _k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec grid_disk_distances(h3_index(), non_neg_integer()) :: list({h3_index(), non_neg_integer()})
+  def grid_disk_distances(_origin, _k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec max_grid_size(non_neg_integer()) :: non_neg_integer()
+  def max_grid_size(_k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec grid_ring_unsafe(h3_index(), non_neg_integer()) :: list(h3_index())
+  def grid_ring_unsafe(_origin, _k), do: :erlang.nif_error(:nif_not_loaded)
+  @spec grid_ring(h3_index(), non_neg_integer()) :: list(h3_index())
+  def grid_ring(_origin, _k), do: :erlang.nif_error(:nif_not_loaded)
+
+
+
 end
