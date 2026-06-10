@@ -131,6 +131,8 @@ static ERL_NIF_TERM max_grid_disk_size(ErlNifEnv* env, int argc, const ERL_NIF_T
     if (!enif_get_int(env, argv[0], &k))
         return enif_make_badarg(env);
     H3Error err = maxGridDiskSize(k, &out);
+    if (err != E_SUCCESS)
+        return make_h3_error(env, err);
     return enif_make_int64(env, out);
 }
 
